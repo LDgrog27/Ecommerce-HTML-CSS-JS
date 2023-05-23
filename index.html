@@ -10,25 +10,17 @@
 
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>
   <main class="main-container">
     <header class="header">
-      <img src="/images/icon-menu.svg" alt="menu-icon"> <!--Explicar "Alt" y estructura para los buscadores de google-->
-      <img src="/images/logo.svg">
-
+      <div class="header__navegation">
+        <img class="header__menu" src="/images/icon-menu.svg" alt="menu-icon">
+        <!--Explicar "Alt" y estructura para los buscadores de google-->
+        <img class="header__logo" src="/images/logo.svg">
+      </div>
       <nav class="navbar">
         <ul class="navbar__items">
           <li><a class="navbar__link" href="#">Collections</a></li>
@@ -59,9 +51,9 @@
           <div class="header__cart--notification">3</div>
           <img src="/images/icon-cart.svg" alt="">
         </div>
-        <img src="/images/image-avatar.png" alt="">
+        <img class="header__avatar" src="/images/image-avatar.png" alt="">
       </div>
-    </header> 
+    </header>
 
     <section class="content">
       <article class="galery">
@@ -69,29 +61,89 @@
           <img class="galery__previous" src="/images/icon-previous.svg">
           <img class="galery__next" src="/images/icon-next.svg">
         </div>
+        <div class="galey__thumnails">
+          <img id="1" class="galey__thumnail" src="/images/image-product-1-thumbnail.jpg" alt="thumnail">
+          <img id="2" class="galey__thumnail" src="/images/image-product-2-thumbnail.jpg" alt="thumnail">
+          <img id="3" class="galey__thumnail" src="/images/image-product-3-thumbnail.jpg" alt="thumnail">
+          <img id="4" class="galey__thumnail" src="/images/image-product-4-thumbnail.jpg" alt="thumnail">
+        </div>
+      </article>
+
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h2 class="details__company">Fall Limited Edition Sneakers</h2>
+        <p class="details_description"> These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="details__prices">
+
+          <p class="details__now">$125.00 <span class="details__descount">50%</span></p>
+          <p class="details__before">$250.00</p>
+
+        </div>
+
+        <div class="details__product-quantity">
+          <div class="input">
+            <img class="inpu__minus" src="/images/icon-minus.svg">
+            <input class="inpu__number" type="number" value="0">
+            <img class="inpu__plus" src="/images/icon-plus.svg">
+          </div>
+          <button class="details__button">Add to cart <img src="/images/icon-cart.svg"></button>
+        </div>
       </article>
     </section>
 
+    <!-- Inicio del Cart Modal-->
+    <div class="cart-modal">
+      <p class="cart-modal__title"> Cart</p>
+      <div class="cart-modal__checkout-container">
+        <div class="cart-modal__details-container">
+          <img src="/images/image-product-1-thumbnail.jpg">
+          <div>
+            <p class="cart-modal__product">Autumn Limited Edition</p>
+            <p class="cart-modal__price">125 x3 <span>$375.00</span></p>
+          </div>
+          <img class="cart-modal__delete" src="/images/icon-delete.svg">
+        </div>
+        <button class="cart-modal__delete">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Fin del Cart Modal-->
+
+    <!-- Inicio del Galery Modal-->
+    <div class="modal-galery__background">
+      <article class="modal-galery">
+        <img class="modal-galery__close" src="/images/icon-close.svg">
+        <div class="modal-galey__image-container">
+          <img class="modal-galery__previous" src="/images/icon-previous.svg">
+          <img class="modal-galery__next" src="/images/icon-next.svg">
+        </div>
+        <div class="galey__thumnails">
+          <img id="m1" class="modal-galey__thumnail" src="/images/image-product-1-thumbnail.jpg" alt="thumnail">
+          <img id="m2" class="modal-galey__thumnail" src="/images/image-product-2-thumbnail.jpg" alt="thumnail">
+          <img id="m3" class="modal-galey__thumnail" src="/images/image-product-3-thumbnail.jpg" alt="thumnail">
+          <img id="m4" class="modal-galey__thumnail" src="/images/image-product-4-thumbnail.jpg" alt="thumnail">
+        </div>
+      </article>
+    </div>
+    <!-- Fin del Galery Modal-->
   </main>
 
 
 
 
 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
