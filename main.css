@@ -25,7 +25,6 @@ body {
 .header__navegation {
   width: 175px;
   height: 100%;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,6 +88,27 @@ body {
 
 .navbar {
   display: none;
+  width: 400px;
+}
+.navbar__items {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__link {
+  text-decoration: none;
+  color: hsl(219deg, 9%, 45%);
+  display: block;
+  height: 112px;
+  padding-top: 42px;
+}
+.navbar__link:hover {
+  border-bottom: 4px solid hsl(26deg, 100%, 55%);
+}
+@media (min-width: 1115px) {
+  .navbar {
+    display: block;
+  }
 }
 
 .modal-navbar {
@@ -123,6 +143,49 @@ body {
 }
 .modal-navbar__close-icon:hover {
   cursor: pointer;
+}
+
+.gallery__image-container {
+  border: 1px solid blue;
+  background-image: url("../images/image-product-1.jpg");
+  height: 300px;
+  width: 100%;
+  background-position-y: -35px;
+  background-size: cover;
+}
+.gallery__previous {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  left: 15px;
+}
+.gallery__previous:hover {
+  cursor: pointer;
+}
+.gallery__next {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  left: 320px;
+}
+.gallery__next:hover {
+  cursor: pointer;
+}
+.gallery__thumnail {
+  display: none;
+}
+@media (min-width: 1115px) {
+  .gallery__thumnail {
+    display: block;
+  }
 }
 
 .main-container {
