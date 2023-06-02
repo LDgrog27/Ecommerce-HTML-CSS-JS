@@ -1,0 +1,22 @@
+@use 'variables';
+@use 'mixins';
+
+.input {
+    border: 1px solid red;
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    &__minus {
+        width: 25px;
+        border: 1px solid black;
+        height: 100%;
+        padding: 24px 5px;
+    }
+    &__plus {
+        width: 25px;
+        border: 1px solid black;
+        height: 100%;
+        padding: 19px 3px;
+    }
+}
+   

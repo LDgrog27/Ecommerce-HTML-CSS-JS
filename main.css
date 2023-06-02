@@ -112,11 +112,11 @@ body {
 }
 
 .modal-navbar {
-  display: none;
   background-color: hsl(0deg, 0%, 100%);
   width: 250px;
-  height: 100%;
+  height: 100vh;
   padding: 28px 24px;
+  display: block;
 }
 .modal-navbar__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
@@ -125,6 +125,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   display: none;
 }
 .modal-navbar__items {
@@ -186,6 +187,69 @@ body {
   .gallery__thumnail {
     display: block;
   }
+}
+
+.details {
+  border: 1px solid red;
+  padding: 24px;
+}
+.details__company {
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.details__title {
+  margin-bottom: 16px;
+}
+.details__description {
+  font-size: 0.94em;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 24px;
+}
+.details__prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.details__now {
+  font-size: 1.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.details__descount {
+  font-size: 0.5em;
+  background-color: hsl(26deg, 100%, 55%);
+  padding: 4px;
+  border-radius: 4px;
+}
+.details__before {
+  font-weight: 700;
+  color: hsl(219deg, 9%, 45%);
+  text-decoration: line-through;
+}
+
+.input {
+  border: 1px solid red;
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+}
+.input__minus {
+  width: 25px;
+  border: 1px solid black;
+  height: 100%;
+  padding: 24px 5px;
+}
+.input__plus {
+  width: 25px;
+  border: 1px solid black;
+  height: 100%;
+  padding: 19px 3px;
 }
 
 .main-container {
