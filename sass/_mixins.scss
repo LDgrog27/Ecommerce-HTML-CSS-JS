@@ -25,3 +25,31 @@
             cursor: pointer;
         }
 }
+
+@mixin changeNumber($pv, $ph) {
+    width: 25px;
+        
+        height: 100%;
+        padding: $pv $ph;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin button {
+     background-color: variables.$Orange;
+     width: 100%;
+     height: 57px;
+     border-radius: 8px;
+     border: none;
+     color: variables.$White;
+     font-size: 0.9em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+     }
+}

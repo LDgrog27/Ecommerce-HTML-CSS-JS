@@ -51,4 +51,8 @@
         color: v.$Dark-grayish-blue;
         text-decoration: line-through;
     }
+
+    &__button {
+        @include mixins.button;
+    }
 }
