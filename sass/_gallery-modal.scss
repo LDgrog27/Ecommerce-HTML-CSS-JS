@@ -1,0 +1,58 @@
+@use 'variables' as v;
+@use 'mixins';
+
+
+.modal-gallery {
+
+    width: 550px;
+    &__background {
+        @include mixins.modal-background;
+        display: grid;
+        place-content: center;
+        display: none;
+    }
+    &__close-container {
+       
+        text-align: right;
+        height: 30px;
+    }
+    &__close {
+        width: 16px;
+        &:hover{
+            cursor: pointer;
+            content: url('../images/icon-close-orange.svg');
+        }
+    }
+    &__image-container {
+        background-size: cover;
+        height: 446px;
+        background-image: url('../images/image-product-1.jpg');
+        border-radius: 16px;
+        margin-bottom: 32px;
+        position: relative;
+    }
+    &__thumnails {
+        border: 2px solid red;
+        width: 450px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    &__thumnail {
+        width: 90px;
+        border-radius: 16px;
+        &:hover {
+           cursor: pointer;
+           border: 2px solid v.$Orange
+        }
+    }
+
+    &__previous {
+        @include mixins.image-btn(190px, -15px, true)
+    }
+    &__next {
+        @include mixins.image-btn(190px, 520px, true)
+    }
+
+}
