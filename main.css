@@ -478,6 +478,24 @@ body {
   }
 }
 
+.footer {
+  display: flex;
+  border: 1px solid black;
+}
+.footer__row-one {
+  border: 1px solid red;
+  width: 33.33%;
+  height: 300px;
+}
+.footer__row-two {
+  margin-top: 80px;
+  border-radius: 5%;
+}
+.footer .maps {
+  border-radius: 5%;
+  height: auto;
+  width: 100%;
+}
 .main-container {
   width: 375px;
   margin: auto;
@@ -495,6 +513,17 @@ body {
     display: flex;
     justify-content: space-around;
   }
+}
+
+.show {
+  display: block;
+}
+
+.cart_empty {
+  color: hsla(0deg, 0%, 0%, 0.5);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

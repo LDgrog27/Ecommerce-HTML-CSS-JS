@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'mixins';
+
+
+.footer {
+    display: flex;
+    border: 1px solid black;
+    &__row-one {
+        border: 1px solid red;
+        width: 33.33%;
+        height: 300px;
+    }
+    &__row-two {
+
+        margin-top: 80px;
+        border-radius: 5%;
+
+    }
+    .maps {
+        border-radius: 5%;
+        height: auto;
+        width: 100%;
+    }
+    &__row-three {
+        
+    }
+}

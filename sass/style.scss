@@ -8,6 +8,8 @@
 @use 'input';
 @use 'modal-cart';
 @use 'gallery-modal';
+@use 'footer';
+
 
 .main-container {
     width: 375px;
@@ -29,4 +31,14 @@
         justify-content: space-around;
     }
 
+}
+
+.show {
+    display: block;
+}
+.cart_empty {
+    color: variables.$Black-modal;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
 }
