@@ -52,6 +52,23 @@ function deleteProduct() {
   cartNotification.innerText = lastValue;
 }
 
+
+//cambiar imagenes cuando se precione los botones flecha.
+const imageContainer = document.querySelector(".gallery__image-container");
+const previousGalleryBtn = document.querySelector(".gallery__previous");
+const nextGalleryBtn = document.querySelector(".gallery__next");
+let imgIndex = 1;
+
+
+nextGalleryBtn.addEventListener('click', () =>{
+    changeNextImage(imageContainer);
+});
+
+previousGalleryBtn.addEventListener('click', () =>{
+  changePreviousImage(imageContainer);
+});
+
+
 // FUNCIONES
 function drawProductModal() {
   productContainer.innerHTML = '';
@@ -85,3 +102,21 @@ function drawProductModal() {
     priceModal.innerHTML = 'Your cart is empty';
   }
 }
+
+function changeNextImage(imgContainer) {
+  if(imgIndex == 4) {
+    imgIndex = 1;
+  }else {
+    imgIndex++;
+  };
+  imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`
+};
+
+function changePreviousImage (imgContainer) {
+  if(imgIndex == 1) {
+    imgIndex = 4;
+  }else {
+    imgIndex--;
+  };
+  imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`
+};
