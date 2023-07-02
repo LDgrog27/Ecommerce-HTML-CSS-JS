@@ -69,6 +69,9 @@ previousGalleryBtn.addEventListener('click', () =>{
 });
 
 
+//Mostrar el modal de iamgenes cuando hago click en la imagen principal
+
+
 // FUNCIONES
 function drawProductModal() {
   productContainer.innerHTML = '';
